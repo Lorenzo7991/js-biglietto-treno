@@ -22,4 +22,4 @@ if(userAge < 18){
     totPrice = totPrice - (totPrice * over);
 }
 
-console.log(totPrice);
+console.log(totPrice.toFixed(2));
