@@ -6,9 +6,19 @@ document.getElementById('userMessage');
 console.log(userMessage);
 
 //Variabili di imput da parte dell'utente
-const userKm = parseInt(prompt("Inserisci il numero di chilometri:", 800));
-const userAge = parseInt(prompt("Inserisci la tua età a numero:", 26));
+let userKm = parseInt(prompt("Inserisci il numero di chilometri:", 800));
+let userAge = parseInt(prompt("Inserisci la tua età a numero:", 26));
 console.log("kilometri utente: " + userKm,"Età utente: " + userAge);
+
+//Controllo per l'inserimento numero valido KM
+if (isNaN(userKm) || userKm <= 0) {
+    userKm = parseInt(prompt("Inserisci un numero di chilometri valido (deve essere un NUMERO e MAGGIORE di ZERO(0)):"));
+}
+
+// Controllo per l'inserimento numero valido per l'età
+if (isNaN(userAge) || userAge <= 0) {
+    userAge = parseInt(prompt("Inserisci un'età valida (deve essere un NUMERO e MAGGIORE di ZERO(0)):"));
+}
 
 //Variabile contenete il prezzo standard per km
 const ticketStandardPrice = 0.21;
